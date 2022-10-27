@@ -4,12 +4,10 @@ from django.db import models
 
 # Create your models here.
 class Professeur(models.Model):
-    login = models.CharField(max_length = 32, null = False)
-    password = models.CharField(max_length = 255, null = False)
-    nom = models.CharField(max_length = 32, null = False)
-    prenom = models.CharField(max_length = 32, null = False)
-    matricule = models.CharField(max_length = 32, null = False, unique = True)
-    grade = models.CharField(max_length = 32, null = False)
-    fonction = models.CharField(max_length = 32, null = False)
-    email = models.CharField(max_length = 32, null = False)
+    nom = models.CharField(max_length = 50)
+    prenom = models.CharField(max_length = 50)
+    matricule = models.CharField(max_length =255, unique = True)
+    grade = models.CharField(max_length = 100)
+    fonction = models.CharField(max_length = 100)
+    email = models.CharField(max_length = 100)
     date_enregistrment = models.DateTimeField()
