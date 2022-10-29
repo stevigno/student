@@ -1,5 +1,6 @@
 from django.db import models
 from sgeee.models import Niveau
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Etudiant(models.Model):
@@ -11,6 +12,7 @@ class Etudiant(models.Model):
     created_date = models.DateTimeField(auto_now_add=True)
     modified_date= models.DateTimeField(auto_now=True)
     niveau = models.ForeignKey(Niveau, on_delete=models.CASCADE)
+    normal = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
         
