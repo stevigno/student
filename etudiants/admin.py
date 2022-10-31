@@ -3,7 +3,7 @@ from .models import Etudiant
 
 class EtudiantAdmin(admin.ModelAdmin):
     list_display = ('nom', 'prenons', 'matricule', 'actifs', 'niveau', 'modified_date')
-    prepopulated_fields = {'slug': ('name')}
+    prepopulated_fields = {'slug': ('nom')}
 
 
 # Register your models here.
