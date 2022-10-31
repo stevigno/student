@@ -2,6 +2,9 @@ from enum import auto
 from django.db import models
 from django.contrib.auth.models import User
 
+from etudiants.models import Etudiant
+from enseignants.models import Professeur
+
 # Create your models here.
 class Niveau(models.Model):
     nom_niveau = models.CharField(max_length = 200, unique=True) 
@@ -18,6 +21,7 @@ class Filiere(models.Model):
 
 class Session_evaluation(models.Model):
     code = models.CharField(max_length = 10, unique = True)
+    nom_ses = models.CharField(max_length = 50)
     date_session = models.DateField(auto_now_add=True)
     modified_date= models.DateField(auto_now=True)
 
@@ -25,20 +29,11 @@ class Question(models.Model):
     code_quest = models.CharField(max_length = 255)
     intitule = models.CharField(max_length = 50)
     critere = models.CharField(max_length = 50, unique = True)
+
+class Reponse(models.Model):
+    etudiant = models.ManyToManyField(Etudiant)
+    professeur = models.ForeignKey(Professeur, on_delete=models.CASCADE)
+    intitule = models.TextField(max_length = 50)
+    code_rep = models.CharField(max_length = 50, unique = True)
     
-class Filiere(models.Model):
-    code_fil = models.CharField(max_length = 10, unique = True)
-    nom_fil = models.CharField(max_length = 50)
-
-class Filiere(models.Model):
-    code_fil = models.CharField(max_length = 10, unique = True)
-    nom_fil = models.CharField(max_length = 50)
-
-class Filiere(models.Model):
-    code_fil = models.CharField(max_length = 10, unique = True)
-    nom_fil = models.CharField(max_length = 50)
-
-class Filiere(models.Model):
-    code_fil = models.CharField(max_length = 10, unique = True)
-    nom_fil = models.CharField(max_length = 50)
 
