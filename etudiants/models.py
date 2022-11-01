@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class Etudiant(models.Model):
-    student = models.ForeignKey(User, on_delete=models.CASCADE)
+    student = models.OneToOneField(User, on_delete=models.CASCADE)
     nom = models.CharField(max_length = 50)
     slug = models.CharField(max_length = 50)
     prenons = models.CharField(max_length = 100)

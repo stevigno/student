@@ -15,4 +15,4 @@ class RegisterForm(UserCreationForm):
 class EtudiantForm(forms.ModelForm):
     class Meta:
         model = Etudiant
-        fields = ["nom", "prenons", "matricule", "actifs", "niveau", ]
+        fields = ["nom", "prenons", "matricule", "actifs", "niveau"]
