@@ -6,18 +6,13 @@ from etudiants.models import Etudiant
 from enseignants.models import Professeur
 
 # Create your models here.
-class Niveau(models.Model):
-    nom_niveau = models.CharField(max_length = 200, unique=True) 
-    intitule = models.CharField(max_length = 100)
 
 class UniteEns(models.Model):
-    code = models.CharField(max_length = 200, unique=True)
+    etudiant = models.CharField(max_length = 200, unique=True)
     nom_unite = models.CharField(max_length = 100)  
-    niveau = models.ForeignKey(Niveau, on_delete=models.CASCADE)  
+    etudiant = models.ForeignKey(Etudiant, on_delete=models.CASCADE)  
+    Professeur = models.ForeignKey(Professeur, on_delete=models.CASCADE)  
 
-class Filiere(models.Model):
-    code_fil = models.CharField(max_length = 10, unique = True)
-    nom_fil = models.CharField(max_length = 50)
 
 class Session_evaluation(models.Model):
     code = models.CharField(max_length = 10, unique = True)
