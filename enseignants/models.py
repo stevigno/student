@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class Professeur(models.Model):
-    teacher = models.ForeignKey(User, on_delete=models.CASCADE)
+    teacher = models.OneToOneField(User, on_delete=models.CASCADE)
     nom = models.CharField(max_length = 50)
     slug = models.CharField(max_length = 50)
     prenoms = models.CharField(max_length = 70)
