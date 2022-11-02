@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from .forms import StudentForm
 
 # Create your views here.
 def create_student(request):
