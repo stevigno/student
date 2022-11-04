@@ -3,7 +3,7 @@ from .models import Professeur
 # Register your models here.
 
 class ProfesseurAdmin(admin.ModelAdmin):
-    list_display = ('nom_prof', 'prenoms', 'matricule', 'fonction', 'actifs', 'email', 'modified_date')
-    prepopulated_fields = {'slug_prof': ('nom_prof',)}
+    list_display = ('nom', 'prenoms', 'matricule', 'fonction', 'actifs', 'adresse', 'updated_at')
+    prepopulated_fields = {'slug_prof': ('nom',)}
 
 admin.site.register(Professeur, ProfesseurAdmin)

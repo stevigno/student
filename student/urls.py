@@ -20,8 +20,8 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('sgeee.urls')),
-    path('', include('django.contrib.auth.urls')),
+    path('student/', include('etudiant.urls')),
+    path('professeur/', include('professeur.urls')),
 ]
 
 urlpatterns = urlpatterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
