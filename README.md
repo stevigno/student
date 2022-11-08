@@ -30,3 +30,10 @@ October 24, 2022 - 15:50:53
 Django version 4.1, using settings 'mysite.settings'
 Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
+
+#Gallery
+<div style="text-align: center;">
+
+![alt text](https://markdown.land/wp-content/uploads/2021/06/markdown-512px.png "Our logo")
+
+</div>
