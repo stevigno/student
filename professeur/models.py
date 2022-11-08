@@ -6,6 +6,7 @@ class Professeur(models.Model):
     slug_prof = models.SlugField(max_length = 50)
     prenoms = models.CharField(max_length = 70)
     matricule = models.CharField(max_length =255, unique = True)
+    image = models.ImageField(upload_to='media/professor/', default='media/professor/default.png')
     grade = models.CharField(max_length = 100)
     fonction = models.CharField(max_length = 100)
     adresse = models.CharField(max_length = 100)

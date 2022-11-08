@@ -1,8 +1,11 @@
 from django.contrib import admin
 from .models import Etudiant
+import admin_thumbnails
+
 
 class EtudiantAdmin(admin.ModelAdmin):
-    list_display = ('nom', 'prenons', 'matricule', 'actifs', 'niveau', 'filiere', 'adresse', 'updated_at')
+    list_display = ('nom', 'prenons', 'matricule', 'niveau', 'actifs', 'filiere', 'adresse', 'updated_at')
+    list_editable = ('actifs',)
     prepopulated_fields = {'slug': ('nom',)}
 
 
