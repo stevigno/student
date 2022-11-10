@@ -30,3 +30,13 @@ October 24, 2022 - 15:50:53
 Django version 4.1, using settings 'mysite.settings'
 Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
+```
+
+#Gallery
+<div style="text-align: center;
+width: 20%; height:20%;
+">
+
+![alt text](https://github.com/stevigno/student/blob/main/captures/Capture1.PNG "Our login")
+
+</div>
