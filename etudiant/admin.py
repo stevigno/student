@@ -4,8 +4,10 @@ import admin_thumbnails
 
 
 class EtudiantAdmin(admin.ModelAdmin):
-    list_display = ('nom', 'prenons', 'matricule', 'niveau', 'actifs', 'filiere', 'adresse', 'updated_at')
+    list_display = ('nom', 'prenons', 'actifs', 'filiere', 'adresse', 'updated_at')
     list_editable = ('actifs',)
+    list_filter = ('genre','niveau')
+    order_by = ('-genre','niveau')
     prepopulated_fields = {'slug': ('nom',)}
 
 
