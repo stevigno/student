@@ -1,0 +1,15 @@
+asgiref==3.5.2
+crispy-bootstrap5==0.7
+da-vinci==0.3.0
+Django==4.1.2
+django-admin-thumbnails==0.2.6
+django-countries==7.4.2
+django-crispy-forms==1.14.0
+django-debug-toolbar==3.7.0
+django-thumbnails==0.7.0
+Pillow==9.2.0
+shortuuid==1.0.9
+six==1.16.0
+sqlparse==0.4.3
+typing_extensions==4.4.0
+tzdata==2022.5

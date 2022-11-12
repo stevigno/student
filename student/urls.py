@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
+from django.views.generic import TemplateView
 from django.conf import settings
 
 urlpatterns = [
@@ -24,6 +25,7 @@ urlpatterns = [
     path('professeur/', include('professeur.urls')),
     path('home/', include('home.urls')),
     path('', include('account.urls', namespace='account')),
+     path('dashboard/', TemplateView.as_view(template_name='index.html'), name='dashboard'),
 ]
 
 if settings.DEBUG:
