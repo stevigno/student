@@ -25,7 +25,7 @@ urlpatterns = [
     path('professeur/', include('professeur.urls')),
     path('home/', include('home.urls')),
     path('', include('account.urls', namespace='account')),
-     path('dashboard/', TemplateView.as_view(template_name='index.html'), name='dashboard'),
+    path('dashboard/', TemplateView.as_view(template_name='index.html'), name='dashboard'),
 ]
 
 if settings.DEBUG:

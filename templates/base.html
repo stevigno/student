@@ -56,12 +56,8 @@
                     </a>
                     <div class="collapse" id="sidebarEmail">
                         <ul class="side-nav-second-level">
-                            <li>
-                                <a href="{% url 'students_profile:student_profile_list'%}">Tout le Staff</a>
-                            </li>
-                            <li>
-                                <a href="{% url 'students_profile:student_profile_create'%}">Ajouter le Staff</a>
-                            </li>
+                            <li><a href="{% url 'professeur:teacher_profile_list' %}"> All Staff</a></li>                                           
+                            <li><a href="{% url 'professeur:teacher_profile_create'%}">Add Staff</a></li> 
                         </ul>
                     </div>
                 </li>
@@ -74,10 +70,10 @@
                     <div class="collapse" id="sidebarEmail">
                         <ul class="side-nav-second-level">
                             <li>
-                                <a href="{% url 'students_profile:student_profile_list'%}">Tout les étudiants</a>
+                                <a href="{% url 'etudiant:student_profile_list'%}">Tout les étudiants</a>
                             </li>
                             <li>
-                                <a href="{% url 'students_profile:student_profile_create'%}">Ajouter des étudiants</a>
+                                <a href="{% url 'etudiant:student_profile_create'%}">Ajouter des étudiants</a>
                             </li>
                         </ul>
                     </div>

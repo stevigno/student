@@ -1,6 +1,10 @@
 from django.db import models
+from django.urls import reverse
+from django.contrib.auth import get_user_model
 
 # Create your models here.
+User = get_user_model()
+
 class Professeur(models.Model):
     nom = models.CharField(max_length = 50)
     slug_prof = models.SlugField(max_length = 50)
@@ -16,3 +20,6 @@ class Professeur(models.Model):
 
     def __str__(self):
         return self.nom
+
+    def get_absolute_url(self):
+        return reverse("teacher_profile:teacher_profile_detail", args = [self.pk])
