@@ -8,7 +8,7 @@ User = get_user_model()
 class TeacherProfileCreateForm(forms.ModelForm):
     class Meta:
         model = Professeur
-        exclude = ('date_created', 'date_updated','user' )
+        exclude = ('created_at', 'updated_at','user' )
 
     def save(self, commit=True):
         teacher_profile = super(TeacherProfileCreateForm, self).save(commit=False)
@@ -20,10 +20,9 @@ class TeacherProfileCreateForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         # self.fields['user'].widget.attrs.update({'class':'form-control'})
-        self.fields['first_name'].widget.attrs.update({'class':'form-control'})
-        self.fields['other_name'].widget.attrs.update({'class':'form-control'})
-        self.fields['last_name'].widget.attrs.update({'class':'form-control'})
-        self.fields['date_of_birth'].widget.attrs.update({'class':'form-control'})
+        self.fields['nom'].widget.attrs.update({'class':'form-control'})
+        self.fields['prenoms'].widget.attrs.update({'class':'form-control'})
+        self.fields['matricule'].widget.attrs.update({'class':'form-control'})
         self.fields['date_admitted'].widget.attrs.update({'class':'form-control'})
         self.fields['address'].widget.attrs.update({'class':'form-control'})
 

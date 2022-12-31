@@ -136,11 +136,9 @@ def upload_teachers(request):
                 'other_name':fields[3],
                 'last_name':fields[4],
                 'gender':fields[5],
-                'mugshot':fields[6],
-                'teacher_class':fields[7],
-                'date_of_birth':fields[9],
-                'date_admitted':fields[9],
-                'address':fields[10]
+                'teacher_class':fields[6],
+                'date_admitted':fields[7],
+                'address':fields[8]
             }
             # print(len(data_dict))
             if data_dict != '':
